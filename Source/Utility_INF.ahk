@@ -1,5 +1,5 @@
 ﻿; 
-;   NVIDIA Graphic Driver INF Utility 1.0 (19-04-2019)
+;   NVIDIA Graphic Driver INF Utility 1.1 (19-04-2019)
 ;   Author: alanfox2000
 ;
 
