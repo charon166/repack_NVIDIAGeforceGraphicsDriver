@@ -1,5 +1,5 @@
 ﻿; 
-;   NVIDIA Graphic Driver Installation Utility 1.4 (24-10-2019)
+;   NVIDIA Graphic Driver Installation Utility 1.5 (14-11-2019)
 ;   Author: alanfox2000
 ;
 #NoTrayIcon
@@ -12,6 +12,8 @@ AhkPath = %A_WorkingDir%\AutoHotkey.exe
 NVIDIAInstall = C:\NVIDIAInstall.bat
 schtasks = %A_WinDir%\system32\schtasks.exe
 bcdedit = %A_WinDir%\system32\bcdedit.exe
+takeown = %A_WinDir%\system32\takeown.exe
+cacls = %A_WinDir%\system32\cacls.exe
 XML = C:\NVIDIAInstall.xml
 
 full_command_line := DllCall("GetCommandLine", "str")
@@ -63,7 +65,7 @@ Gui Add, Button, x265 y128 w80 h23 gXtremeG, Xtreme-G
 Gui Add, Button, x352 y128 w80 h23 gINFUtility, Add HWID
 Gui Add, Button, x440 y128 w160 h23 gSupportCards, Supported Graphics Cards
 Gui Font
-Gui Show, w604 h156, %Title% 1.4
+Gui Show, w604 h156, %Title% 1.5
 GUIDDL := ["TelemetryOptions", "GFEOptions", "RebootOptions", "SilentOptions"]
 Loop % GUIDDL.Length()
 {
@@ -224,6 +226,11 @@ if FileExist(A_WorkingDir "\Display.Driver\NVIDIACorp.NVIDIAControlPanel_56jybvy
 RunWait, %ComSpec% /c %schtasks% /Delete /TN "NVIDIAInstall" /F,, Hide
 Process, Close, %AUTOCLICK_PID%
 FileDelete, %NVIDIAInstall%
+FileCreateDir, %A_AppDataCommon%\NVIDIA Corporation\Drs
+RunWait, %ComSpec% /c %schtasks% /Delete /TN "NVIDIAInstall" /F,, Hide
+RunWait, %ComSpec% /c %takeown% /f "%A_AppDataCommon%" /r /d n,, Hide
+RunWait, %ComSpec% /c %cacls% "%A_AppDataCommon%." /t /e /p administrators:f,, Hide
+RunWait, %ComSpec% /c %cacls% "%A_AppDataCommon%." /t /e /p users:f,, Hide
 Shutdown, 2
 ExitApp
 
@@ -252,6 +259,11 @@ if FileExist(A_WorkingDir "\Display.Driver\NVIDIACorp.NVIDIAControlPanel_56jybvy
     RegDelete, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{0bbca823-e77d-419e-9a44-5adec2c8eeb0}
 }
 Process, Close, %AUTOCLICK_PID%
+FileCreateDir, %A_AppDataCommon%\NVIDIA Corporation\Drs
+RunWait, %ComSpec% /c %schtasks% /Delete /TN "NVIDIAInstall" /F,, Hide
+RunWait, %ComSpec% /c %takeown% /f "%A_AppDataCommon%" /r /d n,, Hide
+RunWait, %ComSpec% /c %cacls% "%A_AppDataCommon%." /t /e /p administrators:f,, Hide
+RunWait, %ComSpec% /c %cacls% "%A_AppDataCommon%." /t /e /p users:f,, Hide
 ExitApp
 
 SupportCards:
