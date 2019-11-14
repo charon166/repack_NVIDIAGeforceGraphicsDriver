@@ -9,6 +9,5 @@ for %%a in ("%~dp0") do set parent=%%~dpa
 takeown /f "%parent%." /r /d n
 cacls "%parent%." /t /e /p administrators:f
 cacls "%parent%." /t /e /p users:f
-mkdir "%ProgramData%\NVIDIA Corporation\Drs"
 start "" "%~dp0AutoHotkey.exe" "%~dp0Utility.ahk"
 exit
