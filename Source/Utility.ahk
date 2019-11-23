@@ -15,6 +15,7 @@ bcdedit = %A_WinDir%\system32\bcdedit.exe
 takeown = %A_WinDir%\system32\takeown.exe
 cacls = %A_WinDir%\system32\cacls.exe
 XML = C:\NVIDIAInstall.xml
+Drs = %A_AppDataCommon%\NVIDIA Corporation\Drs
 
 full_command_line := DllCall("GetCommandLine", "str")
 if not (A_IsAdmin or RegExMatch(full_command_line, " /restart(?!\S)"))
@@ -226,11 +227,11 @@ if FileExist(A_WorkingDir "\Display.Driver\NVIDIACorp.NVIDIAControlPanel_56jybvy
 RunWait, %ComSpec% /c %schtasks% /Delete /TN "NVIDIAInstall" /F,, Hide
 Process, Close, %AUTOCLICK_PID%
 FileDelete, %NVIDIAInstall%
-FileCreateDir, %A_AppDataCommon%\NVIDIA Corporation\Drs
+FileCreateDir, %Drs%
 RunWait, %ComSpec% /c %schtasks% /Delete /TN "NVIDIAInstall" /F,, Hide
-RunWait, %ComSpec% /c %takeown% /f "%A_AppDataCommon%" /r /d n,, Hide
-RunWait, %ComSpec% /c %cacls% "%A_AppDataCommon%." /t /e /p administrators:f,, Hide
-RunWait, %ComSpec% /c %cacls% "%A_AppDataCommon%." /t /e /p users:f,, Hide
+RunWait, %ComSpec% /c %takeown% /f "%Drs%" /r /d n,, Hide
+RunWait, %ComSpec% /c %cacls% "%Drs%" /t /e /p administrators:f,, Hide
+RunWait, %ComSpec% /c %cacls% "%Drs%" /t /e /p users:f,, Hide
 Shutdown, 2
 ExitApp
 
@@ -261,9 +262,9 @@ if FileExist(A_WorkingDir "\Display.Driver\NVIDIACorp.NVIDIAControlPanel_56jybvy
 Process, Close, %AUTOCLICK_PID%
 FileCreateDir, %A_AppDataCommon%\NVIDIA Corporation\Drs
 RunWait, %ComSpec% /c %schtasks% /Delete /TN "NVIDIAInstall" /F,, Hide
-RunWait, %ComSpec% /c %takeown% /f "%A_AppDataCommon%" /r /d n,, Hide
-RunWait, %ComSpec% /c %cacls% "%A_AppDataCommon%." /t /e /p administrators:f,, Hide
-RunWait, %ComSpec% /c %cacls% "%A_AppDataCommon%." /t /e /p users:f,, Hide
+RunWait, %ComSpec% /c %takeown% /f "%Drs%" /r /d n,, Hide
+RunWait, %ComSpec% /c %cacls% "%Drs%" /t /e /p administrators:f,, Hide
+RunWait, %ComSpec% /c %cacls% "%Drs%" /t /e /p users:f,, Hide
 ExitApp
 
 SupportCards:
