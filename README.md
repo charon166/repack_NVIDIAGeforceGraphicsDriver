@@ -14,6 +14,7 @@ https://github.com/alanfox2000/repack_NVIDIAGeforceGraphicsDriver/raw/master/Ext
 Dolby Advanced Audio v2:
 https://github.com/alanfox2000/repack_NVIDIAGeforceGraphicsDriver/raw/master/Extra/DolbyAdvancedAudio.rar
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://raw.githubusercontent.com/alanfox2000/realtek-hda-release/master/LICENSE)
 
 #### Support:
 
