@@ -26,6 +26,10 @@ Q2. Is the debloated repack driver support my geforce graphics card(s)?
 
 A2. Each version of debloated repack driver support graphic cards accodring to correspond version of original NVIDIA driver. You can add [your graphic card HWID](https://github.com/alanfox2000/repack_NVIDIAGeforceGraphicsDriver/wiki/Installation#add-hardware-id) during the installation.
 
+Q3. I found a issue during installation, where can I report?
+
+A3. Post your [![feedback](https://img.shields.io/badge/feedback-green.svg)](https://puresoftapps.blogspot.com/2019/01/nvidia-graphics-driver-mod-2019-10-01.html#comments) on the blog comments section
+
 ---------------------------------------
 
 ### Support:
