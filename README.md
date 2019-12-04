@@ -6,13 +6,25 @@ Debloated NVIDIA Geforce Graphics Driver with telemetry remove and performance t
 
 ---------------------------------------
 
-### Downloads
+### Downloads:
 
 [Debloated Drivers](https://github.com/alanfox2000/repack_NVIDIAGeforceGraphicsDriver/releases)
 
 Audio Control Panel for HDMI Output (Optional):
 
 [Dolby Home Theater v4](https://github.com/alanfox2000/repack_NVIDIAGeforceGraphicsDriver/raw/master/Extra/DolbyHomeTheater.rar) or [Dolby Advanced Audio v2](https://github.com/alanfox2000/repack_NVIDIAGeforceGraphicsDriver/raw/master/Extra/DolbyAdvancedAudio.rar)
+
+---------------------------------------
+
+### FAQ:
+
+Q1. What different between official driver and the debloated repack driver?
+
+A1. Read [What's Actually Change](https://github.com/alanfox2000/repack_NVIDIAGeforceGraphicsDriver/wiki/What's-Actually-Change) and the repack driver release notes.
+
+Q2. Is the debloated repack driver support my geforce graphics card(s)?
+
+A2. Each version of debloated repack driver support graphic cards accodring to correspond version of original NVIDIA driver. You can add [your graphic card HWID](https://github.com/alanfox2000/repack_NVIDIAGeforceGraphicsDriver/wiki/Installation#add-hardware-id) during the installation.
 
 ---------------------------------------
 
