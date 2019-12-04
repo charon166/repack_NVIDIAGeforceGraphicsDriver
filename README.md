@@ -18,15 +18,15 @@ Audio Control Panel for HDMI Output (Optional):
 
 ### FAQ:
 
-Q1. What different between official driver and the debloated repack driver?
+**Q1. What different between official driver and the debloated repack driver?**
 
 A1. Read [What's Actually Change](https://github.com/alanfox2000/repack_NVIDIAGeforceGraphicsDriver/wiki/What's-Actually-Change) and the repack driver release notes.
 
-Q2. Is the debloated repack driver support my geforce graphics card(s)?
+**Q2. Is the debloated repack driver support my geforce graphics card(s)?**
 
 A2. Each version of debloated repack driver support graphic cards accodring to correspond version of original NVIDIA driver. You can add [your graphic card HWID](https://github.com/alanfox2000/repack_NVIDIAGeforceGraphicsDriver/wiki/Installation#add-hardware-id) during the installation.
 
-Q3. I found a issue during installation, where can I report?
+**Q3. I found a issue during installation, where can I report?**
 
 A3. Post your [![feedback](https://img.shields.io/badge/feedback-green.svg)](https://puresoftapps.blogspot.com/2019/01/nvidia-graphics-driver-mod-2019-10-01.html#comments) on the blog comments section
 
