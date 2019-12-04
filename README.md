@@ -19,7 +19,7 @@ Audio Control Panel for HDMI Output (Optional):
 
 ### FAQ:
 
-**Q1. What different between official driver and the debloated repack driver?**
+**Q1. What is the difference between official driver and the debloated repack driver?**
 
 A1. Read [What's Actually Change](https://github.com/alanfox2000/repack_NVIDIAGeforceGraphicsDriver/wiki/What's-Actually-Change) and the repack driver release notes.
 
