@@ -228,7 +228,6 @@ RunWait, %ComSpec% /c %schtasks% /Delete /TN "NVIDIAInstall" /F,, Hide
 Process, Close, %AUTOCLICK_PID%
 FileDelete, %NVIDIAInstall%
 FileCreateDir, %Drs%
-RunWait, %ComSpec% /c %schtasks% /Delete /TN "NVIDIAInstall" /F,, Hide
 RunWait, %ComSpec% /c %takeown% /f "%Drs%" /r /d n,, Hide
 RunWait, %ComSpec% /c %cacls% "%Drs%" /t /e /p administrators:f,, Hide
 RunWait, %ComSpec% /c %cacls% "%Drs%" /t /e /p users:f,, Hide
@@ -259,9 +258,9 @@ if FileExist(A_WorkingDir "\Display.Driver\NVIDIACorp.NVIDIAControlPanel_56jybvy
     RegWrite, REG_DWORD, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock, AllowAllTrustedApps, %AllowAllTrustedApps%
     RegDelete, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{0bbca823-e77d-419e-9a44-5adec2c8eeb0}
 }
+RunWait, %ComSpec% /c %schtasks% /Delete /TN "NVIDIAInstall" /F,, Hide
 Process, Close, %AUTOCLICK_PID%
 FileCreateDir, %A_AppDataCommon%\NVIDIA Corporation\Drs
-RunWait, %ComSpec% /c %schtasks% /Delete /TN "NVIDIAInstall" /F,, Hide
 RunWait, %ComSpec% /c %takeown% /f "%Drs%" /r /d n,, Hide
 RunWait, %ComSpec% /c %cacls% "%Drs%" /t /e /p administrators:f,, Hide
 RunWait, %ComSpec% /c %cacls% "%Drs%" /t /e /p users:f,, Hide
